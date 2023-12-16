@@ -1,0 +1,2 @@
+const appId = '';
+const token = '';
