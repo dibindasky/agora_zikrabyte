@@ -1,4 +1,5 @@
 import 'package:agora_uikit/agora_uikit.dart';
+import 'package:agora_zikrabyte/pages/home.dart';
 import 'package:agora_zikrabyte/utils/settings.dart';
 import 'package:flutter/material.dart';
 // import 'package:agora_rtc_engine/agora_rtc_engine.dart';
@@ -6,10 +7,10 @@ import 'dart:async';
 // import 'package:agora_zikrabyte/utils/settings.dart';
 
 class CallsPage extends StatefulWidget {
-  const CallsPage({super.key, required this.role, required this.channelName});
+  const CallsPage({super.key, required this.channelName});
 
   final String channelName;
-  final ClientRoleType role;
+  // final ClientRoleType role;
 
   @override
   State<CallsPage> createState() => _CallsPageState();
@@ -115,8 +116,8 @@ class _CallsPageState extends State<CallsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Agora'),
+      appBar: AppBar(leading: null,
+        title: const Text('Agora Call'),
         centerTitle: true,
       ),
       // body: Stack(
@@ -145,6 +146,10 @@ class _CallsPageState extends State<CallsPage> {
                 enableHostControls: true, // Add this to enable host controls
               ),
               AgoraVideoButtons(
+                onDisconnect: (){
+                  endCall();
+                  Navigator.pop(context);
+                },
                 client: client,
                 addScreenSharing: false, // Add this to enable screen sharing
               ),

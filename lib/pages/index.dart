@@ -1,9 +1,8 @@
 import 'dart:developer';
 
+import 'package:agora_uikit/agora_uikit.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:agora_rtc_engine/agora_rtc_engine.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:agora_zikrabyte/pages/calls.dart';
 
 class IndexPage extends StatefulWidget {
@@ -117,7 +116,7 @@ class _IndexPageState extends State<IndexPage> {
           MaterialPageRoute(
             builder: (context) => CallsPage(
               channelName: _channelController.text,
-              role: _role!,
+              // role: _role!,
             ),
           ),
         );

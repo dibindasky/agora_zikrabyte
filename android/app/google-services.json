@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "472814168339",
+    "project_id": "assignmentwandoor",
+    "storage_bucket": "assignmentwandoor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472814168339:android:77e59093066558621d92e6",
+        "android_client_info": {
+          "package_name": "com.example.agora_zikrabyte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472814168339-abpbbc5apnlernk9brapga05f85617cq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmPsDRrlwue9mLHK81PuveU28fuqR3jMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472814168339-abpbbc5apnlernk9brapga05f85617cq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "472814168339-g8bc4ckcvaqooofb4mjaoaaech3egi41.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.assignmentWandoorKayla.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472814168339:android:62c449a6d5f530011d92e6",
+        "android_client_info": {
+          "package_name": "com.example.assignment_wandoor_kayla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "472814168339-9r5se8vev2q7iib0n40m12bank75600r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.assignment_wandoor_kayla",
+            "certificate_hash": "b941db4cd480ecda0da46c0f8541983b77d7e0cd"
+          }
+        },
+        {
+          "client_id": "472814168339-abpbbc5apnlernk9brapga05f85617cq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmPsDRrlwue9mLHK81PuveU28fuqR3jMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "472814168339-abpbbc5apnlernk9brapga05f85617cq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "472814168339-g8bc4ckcvaqooofb4mjaoaaech3egi41.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.assignmentWandoorKayla.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
