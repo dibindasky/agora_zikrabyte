@@ -14,7 +14,7 @@ class IndexPage extends StatefulWidget {
 }
 
 class _IndexPageState extends State<IndexPage> {
-  final _channelController = TextEditingController();
+  final _channelController = TextEditingController(text: 'test');
   bool _validateError = false;
   ClientRoleType? _role = ClientRoleType.clientRoleBroadcaster;
 
