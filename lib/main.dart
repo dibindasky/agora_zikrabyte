@@ -1,7 +1,13 @@
-import 'package:agora_zikrabyte/pages/index.dart';
+import 'package:agora_zikrabyte/pages/home.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -14,11 +20,11 @@ class MyApp extends StatelessWidget {
       title: 'Agora',
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.green, foregroundColor: Colors.white),
+            backgroundColor: Color.fromARGB(255, 3, 0, 5), foregroundColor: Colors.white),
         primaryColor: Colors.green,
         useMaterial3: true,
       ),
-      home: const IndexPage(),
+      home: const MyHomePage(),
     );
   }
 }
