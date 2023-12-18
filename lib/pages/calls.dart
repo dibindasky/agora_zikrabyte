@@ -24,11 +24,12 @@ class _CallsPageState extends State<CallsPage> {
   // bool _localUserJoined = false;
   // late RtcEngine _engine;
   // int? _remoteUid;
+  // 
 
   final AgoraClient client = AgoraClient(
     agoraConnectionData: AgoraConnectionData(
       appId: appId,
-      channelName: "zikrabyte_test",
+      channelName: "temp",
       username: "user",
       tempToken: token
     ),
@@ -116,7 +117,7 @@ class _CallsPageState extends State<CallsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: null,
+      appBar: AppBar(leading: const SizedBox(),
         title: const Text('Agora Call'),
         centerTitle: true,
       ),

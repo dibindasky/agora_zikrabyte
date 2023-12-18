@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
       title: 'Agora',
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-            backgroundColor: Color.fromARGB(255, 3, 0, 5), foregroundColor: Colors.white),
+            backgroundColor: Color.fromARGB(255, 3, 0, 5),
+            foregroundColor: Colors.white),
         primaryColor: Colors.green,
         useMaterial3: true,
       ),
