@@ -1,5 +1,6 @@
 import 'package:agora_zikrabyte/pages/calls.dart';
 import 'package:agora_zikrabyte/utils/constant.dart';
+import 'package:agora_zikrabyte/utils/settings.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,39 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add),
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) {
+                  String tok = '';
+                  return AlertDialog(
+                    title: const Text('Add Token'),
+                    content: TextField(
+                      decoration:
+                          const InputDecoration(border: OutlineInputBorder()),
+                      onChanged: (value) {
+                        tok = value;
+                      },
+                    ),
+                    actions: [
+                      ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              foregroundColor: kWhite, backgroundColor: kGreen),
+                          onPressed: () {
+                            token = tok;
+                            Navigator.pop(context);
+                          },
+                          child: const Text('set'))
+                    ],
+                  );
+                },
+              );
+            },
+          )
+        ],
         centerTitle: true,
         title: Text(
           'Agora',
@@ -100,11 +134,17 @@ class MyHomePage extends StatelessWidget {
                               ),
                               trailing: IconButton(
                                   onPressed: () async {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                CallsPage(channelName: name)));
+                                    await FirebaseFirestore.instance
+                                        .collection('call')
+                                        .doc('O8siRs59WiWAVAYL1KxL')
+                                        .set({'call': name}).then((value) =>
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        CallsPage(
+                                                            channelName:
+                                                                name))));
                                   },
                                   icon: const Icon(
                                     Icons.video_call_rounded,
